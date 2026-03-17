@@ -44,7 +44,7 @@ export default function ModelProfileClient({ model }: { model: Model }) {
           <div
             className="absolute inset-0"
             style={{
-              background: "linear-gradient(to bottom, transparent 50%, var(--cream) 100%)",
+              background: "linear-gradient(to bottom, transparent 30%, rgba(0,0,0,0.5) 70%, var(--cream) 100%)"
             }}
           />
         </motion.div>
