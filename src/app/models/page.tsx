@@ -8,8 +8,6 @@ import { models } from "@/data/models";
 export default function ModelsPage() {
   return (
     <div style={{ backgroundColor: "var(--cream)", paddingTop: "8rem" }}>
-
-      {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -29,7 +27,6 @@ export default function ModelsPage() {
         </h1>
       </motion.div>
 
-      {/* Editorial list */}
       <div>
         {models.map((model, i) => (
           <motion.div
@@ -48,7 +45,6 @@ export default function ModelsPage() {
                 className="grid md:grid-cols-[1fr_320px]"
                 style={{ minHeight: "280px" }}
               >
-                {/* Left — text */}
                 <div
                   className="flex flex-col justify-between"
                   style={{
@@ -57,7 +53,6 @@ export default function ModelsPage() {
                   }}
                 >
                   <div>
-                    {/* Index number */}
                     <p
                       className="font-body text-[11px] tracking-[0.2em] text-(--ink-faint)"
                       style={{ marginBottom: "1.5rem" }}
@@ -65,7 +60,6 @@ export default function ModelsPage() {
                       {String(i + 1).padStart(2, "0")}
                     </p>
 
-                    {/* Name — slides right on hover */}
                     <motion.h2
                       className="font-display text-4xl md:text-6xl font-light text-(--ink) leading-none"
                       whileHover={{ x: 12 }}
@@ -82,7 +76,6 @@ export default function ModelsPage() {
                     </p>
                   </div>
 
-                  {/* Tags */}
                   <div className="flex flex-wrap gap-2" style={{ marginTop: "2rem" }}>
                     {model.tags.map((tag) => (
                       <span
@@ -99,7 +92,6 @@ export default function ModelsPage() {
                   </div>
                 </div>
 
-                {/* Right — image */}
                 <div className="relative overflow-hidden" style={{ height: "280px" }}>
                   <Image
                     src={model.cover}
@@ -111,7 +103,6 @@ export default function ModelsPage() {
                       transition: "transform 0.7s ease, filter 0.5s ease",
                     }}
                   />
-                  {/* On hover — color comes back, image zooms */}
                   <motion.div
                     className="absolute inset-0"
                     initial={{ opacity: 1 }}
@@ -126,7 +117,6 @@ export default function ModelsPage() {
                     }}
                   />
 
-                  {/* View label */}
                   <div
                     className="absolute bottom-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     style={{ padding: "1rem" }}
