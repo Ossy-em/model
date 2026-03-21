@@ -12,10 +12,10 @@ export type Model = {
     eyes: string;
     hair: string;
   };
-  cover: string;       // image shown on the roster grid
-  hero: string;        // large image shown at top of profile
-  images: string[];    // all images for the profile gallery + sequence
-  tags: string[];      // e.g. ["Editorial", "Runway", "Commercial"]
+  cover: string;       
+  hero: string;        
+  images: string[];    
+  tags: string[];     
 };
 
 export const models: Model[] = [
