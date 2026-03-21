@@ -21,12 +21,11 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-20 md:px-12 py-6"
       style={{ backgroundColor: "transparent" }}
     >
-      {/* Logo */}
+
       <Link href="/" className="font-display text-2xl font-light tracking-[0.25em] text-(--ink)">
         NOIR
       </Link>
 
-      {/* Nav links */}
       <nav className="flex items-center gap-8">
         {links.map((link) => {
           const isActive = pathname === link.href;
