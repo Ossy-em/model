@@ -31,7 +31,6 @@ export default function ModelProfileClient({ model }: { model: Model }) {
   return (
     <div style={{ backgroundColor: "var(--cream)" }}>
 
-      {/* ── HERO ── */}
       <div ref={containerRef} className="relative overflow-hidden" style={{ height: "100vh" }}>
         <motion.div style={{ y: heroY }} className="absolute inset-0">
           <Image
@@ -88,7 +87,6 @@ export default function ModelProfileClient({ model }: { model: Model }) {
         </motion.div>
       </div>
 
-      {/* ── IMAGE SEQUENCE ── */}
       <div ref={sequenceRef} style={{ height: "400vh", position: "relative" }}>
         <div style={{ position: "sticky", top: 0, height: "100vh", overflow: "hidden" }}>
           {sequenceImages.map((src, i) => (
@@ -129,7 +127,6 @@ export default function ModelProfileClient({ model }: { model: Model }) {
         </div>
       </div>
 
-      {/* ── BIO + STATS ── */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -177,7 +174,6 @@ export default function ModelProfileClient({ model }: { model: Model }) {
         </div>
       </motion.div>
 
-      {/* ── GALLERY ── */}
       <div style={{ padding: "0 3rem 6rem 3rem", borderTop: "1px solid var(--sand)" }}>
         <p
           className="font-body text-[11px] tracking-[0.3em] uppercase text-[var(--ink-muted)]"
