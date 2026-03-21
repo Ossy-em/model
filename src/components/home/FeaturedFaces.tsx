@@ -27,7 +27,6 @@ export default function FeaturedFaces() {
         paddingRight: "3rem",
       }}
     >
-      {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -47,7 +46,6 @@ export default function FeaturedFaces() {
         </Link>
       </motion.div>
 
-      {/* Scattered layout */}
       <div
         style={{
           position: "relative",
@@ -80,7 +78,6 @@ export default function FeaturedFaces() {
             }}
           >
             <Link href={photo.href} className="block group">
-              {/* Polaroid frame */}
               <div
                 style={{
                   backgroundColor: "#fff",
@@ -96,7 +93,6 @@ export default function FeaturedFaces() {
                     className="object-cover object-top"
                   />
                 </div>
-                {/* Polaroid caption */}
                 <p
                   className="font-display text-[11px] font-light text-center"
                   style={{
