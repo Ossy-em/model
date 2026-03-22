@@ -22,7 +22,6 @@ export default function Cursor() {
     const onMouseEnterLink = () => cursor.classList.add("expanded");
     const onMouseLeaveLink = () => cursor.classList.remove("expanded");
 
-    // Smooth follow with lerp
     const animate = () => {
       curX += (mouseX - curX) * 0.12;
       curY += (mouseY - curY) * 0.12;
@@ -34,7 +33,6 @@ export default function Cursor() {
     animate();
     window.addEventListener("mousemove", onMouseMove);
 
-    // Expand on interactive elements
     const interactives = document.querySelectorAll("a, button, [data-cursor-expand]");
     interactives.forEach((el) => {
       el.addEventListener("mouseenter", onMouseEnterLink);
