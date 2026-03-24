@@ -15,7 +15,7 @@ const fadeUp = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.9, ease: [0.25, 0.4, 0.25, 1] },
+    transition: { duration: 0.9 },
   },
 };
 
@@ -24,7 +24,7 @@ const letterVariant = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: [0.25, 0.4, 0.25, 1] },
+    transition: { duration: 0.7 },
   },
 };
 
@@ -58,7 +58,7 @@ export default function Hero() {
       ref={heroRef}
       className="relative min-h-screen grid md:grid-cols-[1fr_1fr] overflow-hidden"
     >
-      {/* Left — typography */}
+
       <div className="flex flex-col justify-end px-8 md:px-12 pb-16 pt-32 relative z-10">
         <motion.div
           variants={stagger}
@@ -102,14 +102,12 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Right — hero image with parallax + ambient float */}
       <motion.div
         initial={{ opacity: 0, scale: 1.04 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.2, ease: [0.25, 0.4, 0.25, 1] }}
         className="relative h-[60vh] md:h-screen overflow-hidden"
       >
-        {/* Parallax + float wrapper */}
         <motion.div
           style={{ y: heroY }}
           animate={{ y: [0, -10, 0] }}
